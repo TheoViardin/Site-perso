@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://smtpjs.com/v2/smtp.js"></script>
+  <title>Contact</title>
+</head>
+<body>
+  <div class="row container">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Login" id="login" type="text" class="validate">
+          <label for="login">Login</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+    </form>    
+    <a class="waves-effect waves-green btn-flat connexion">Se connecter</a>
+  </div>
+
+  <div class="row container">
+    <div class="col s12">
+      <div class="row">
+          <ul class="collection">
+
+          </ul>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $('.connexion').click((e) => {
+      $('.collection').empty();
+      e.preventDefault();
+      $.post('./api/login', {login: $('#login').val(), password:$('#password').val()}, (res) => {
+        if (res.status = 200) {
+          res.chain.chain.forEach((element) => {
+            $('.collection').append(`<li class="collection-item">From: ${element.data.from}, Object: ${element.data.object}, Message: ${element.data.message}</li>`);
+          });
+        }
+      }).fail((jqXHR, textStatus, errorThrown) => {
+        if (jqXHR.status == 404) {
+          $('.collection').append(`<li class="collection-item red-text text-darken-2">Ce compte n'existe pas</li>`);           
+        }
+      });
+    });
+  </script>
+</body>
+</html>

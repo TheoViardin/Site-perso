@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://smtpjs.com/v2/smtp.js"></script>
+  <title>Théo Viardin</title>
+</head>
+<body>
+  <header>
+    <div class="navbar-fixed">
+      <nav class="nav-extended" style="background-color: transparent; box-shadow: none">
+        <div class="nav-wrapper blue nav-titre">
+          <a href="index.html" class="brand-logo center titre">Théo Viardin</a>
+          <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal modal-trigger pulse tooltipped" data-position="left" data-tooltip="Me contacter!" href="#modalContact">
+            <i class="material-icons">email</i>
+          </a>
+        </div>
+        
+        <div class="nav-content row hide-on-med-and-down">
+          <ul class="tabs blue col s12" >
+            <li class="tab col s6"><a class="active" href="#CV" style="color:white">CV</a></li>
+            <li class="tab col s6"><a href="#stage" style="color:white">Stage</a></li>
+          </ul>       
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+    <div id="CV">
+      <div class="parallax-container">
+        <div class="parallax">
+          <img src="./assets/pexels-photo.jpg">
+        </div>
+      </div>
+      <div class="hide-on-med-and-down">
+        <div class="container white">
+          <div class="row">
+            <!--<h2 class="header blue-text">Informations</h2>
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Téléphone</div>
+                <div class="collapsible-body"><span>06 02 31 79 30</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Email</div>
+                <div class="collapsible-body"><span>theoviardin@gmail.com</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Adresse</div>
+                <div class="collapsible-body"><span>137, rue de la Jarnigarnière<br>44115 Basse-Goulaine</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Naissance</div>
+                <div class="collapsible-body"><span>07/04/1998 - Bourges</span></div>
+              </li>
+            </ul>-->
+            <div class="container" style="margin-top: 10px;">
+                <div class="chip" style="font-size: 15px;">06 02 31 79 30</div>
+                <div class="chip" style="font-size: 15px;">theoviardin@gmail.com</div>
+                <div class="chip" style="font-size: 15px;">137, rue de la Jarnigarnière, 44115 Basse-Goulaine</div>
+                <div class="chip" style="font-size: 15px;">Permis B</div>
+            </div>
+          </div>
+
+          <div class="container white">
+            <div class="row">
+              <h2 class="header blue-text">Formations</h2>
+              <ul class="collapsible">
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">add</i>2016-2018   DUT Informatique - IUT de Nantes</div>
+                  <div class="collapsible-body"><span>Diplôme Universitaire de Technologie en Informatique comprennant 1 stage de 3 mois et 2 projets repartis sur 300 heures.</span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">add</i>2016   Baccalauréat Série STI2D</div>
+                  <div class="collapsible-body"><span>Baccalauréat Sciences et Technologie de l'Industrie et du Développement Durable <b>Option SIN</b> 
+                    (Système d'Information et Numérique) à <b>la Joliverie</b>. <b>Mention bien</b>.</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="container white">
+            <div class="row">
+              <h2 class="header blue-text">Compétences</h2>
+              <h4 class="light">Programmation</h4>
+              <p>JavaScript, PHP, HTML/CSS, Java, Python, Go</p>
+              <h4 class="light">Réseau</h4>
+              <p>IPv4, IPv6, DHCP, HTTP, DNS, TCP/UDP</p>
+              <h4 class="light">Systèmes d'exploitation</h4>
+              <p>Linux (Ubuntu, Opensuse, CentOs, Debian), Windows, Android</p>
+              <h4 class="light">Langues</h4>
+              <p><b>Anglais</b> Scolaire, <b>Espagnol</b> Scolaire</p>
+            </div>
+          </div>
+
+          <div class="container white">
+            <div class="row">
+              <h2 class="header blue-text">Stages</h2>
+              <ul class="collapsible">
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">add</i>Avril-Juin 2018   Programmation - HOP! (Bouguenais)</div>
+                  <div class="collapsible-body"><span>Intégration d’un système de SSO à une application déjà en place.<br>Développement de tests de non regression sur des services SOAP. <a href="" id="toStage">Voir</a></span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">add</i>Avril 2014   Vente - Darty (Saint-Sébastien sur Loire)</div>
+                  <div class="collapsible-body"><span>Découverte de l'univers de la vente Hi-Fi, informatique.</span></div>
+                </li>
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">add</i>Mai 2013   Télecom et réseau - NextiraOne (Saint Herblain)</div>
+                  <div class="collapsible-body"><span>Assistance à distance au Centre de Service Clients. <br>Accompagnement d'un architecte développeur.</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="container white">
+            <div class="row">
+              <h2 class="header blue-text">Expériences professionnelles</h2>
+              <ul class="collapsible">
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">add</i>Juillet-Aout 2017   Galliance (Le Bignon)</div>
+                  <div class="collapsible-body"><span>Opérateur de conditionnement</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="container white">
+            <div class="row">
+              <h2 class="header blue-text">Divers</h2>
+              <p>PSC1 (Prévention et Secours Civiques de niveau 1)</p>
+              <p>Permis B + voiture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hide-on-large-only flow-text">
+        <div class="container white">
+          <div class="row">
+            <h2 class="header blue-text">Curriculum vitæ</h2>
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Formations</div>
+                <div class="collapsible-body">
+                  <ul class="collapsible">
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">add</i>2016-2018   DUT Informatique - IUT de Nantes</div>
+                      <div class="collapsible-body"><span>Diplôme Universitaire de Technologie en Informatique comprennant 1 stage de 3 mois et 2 projets repartis sur 300 heures.</span></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">add</i>2016   Baccalauréat Série STI2D</div>
+                      <div class="collapsible-body"><span>Baccalauréat Sciences et Technologie de l'Industrie et du Développement Durable <b>Option SIN</b> 
+                        (Système d'Information et Numérique) à <b>la Joliverie</b>. <b>Mention bien</b>.</span></div>
+                    </li>
+                  </ul>
+                </div>
+              </li>              
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Compétences</div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <h4 class="light">Programmation</h4>
+                    <p>JavaScript, PHP, HTML/CSS, Java, Python, Go</p>
+                    <h4 class="light">Réseau</h4>
+                    <p>IPv4, IPv6, DHCP, HTTP, DNS, TCP/UDP</p>
+                    <h4 class="light">Systèmes d'exploitation</h4>
+                    <p>Linux (Ubuntu, Opensuse, CentOs, Debian), Windows, Android</p>
+                    <h4 class="light">Langues</h4>
+                    <p><b>Anglais</b> Scolaire, <b>Espagnol</b> Scolaire</p>
+                  </div>
+                </div>
+              </li>              
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Stages</div>
+                <div class="collapsible-body">
+                  <ul class="collapsible">
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">add</i>Avril-Juin 2018   Programmation - HOP! (Bouguenais)</div>
+                        <div class="collapsible-body"><span>Intégration d’un système de SSO à une application déjà en place.<br>Développement de tests de non regression sur des services SOAP.</span></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">add</i>Avril 2014   Vente - Darty (Saint-Sébastien sur Loire)</div>
+                        <div class="collapsible-body"><span>Découverte de l'univers de la vente Hi-Fi, informatique.</span></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">add</i>Mai 2013   Télecom et réseau - NextiraOne (Saint Herblain)</div>
+                        <div class="collapsible-body"><span>Assistance à distance au Centre de Service Clients. <br>Accompagnement d'un architecte développeur.</span></div>
+                      </li> 
+                    </ul>
+                </div>
+              </li>                
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Expériences professionnelles</div>
+                <div class="collapsible-body">
+                  <ul class="collapsible">
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">add</i>Juillet-Aout 2017 Galliance (Le Bignon)</div>
+                        <div class="collapsible-body"><span>Opérateur de conditionnement</span></div>
+                      </li>  
+                    </ul>
+                </div>
+              </li>              
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Divers</div>
+                <div class="collapsible-body"><span>PSC1 (Prévention et Secours Civiques de niveau 1) <br> Permis B + voiture</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="parallax-container">
+        <div class="parallax">
+          <img src="./assets/blurred-background-close-up-coffee-cup-908284.jpg">
+        </div>
+      </div>
+    </div>
+
+    <div id="stage" style="height:2000px;">
+      <div class="parallax-container">
+        <div class="parallax">
+          <img src="./assets/pexels-photo-723240.jpeg">
+        </div>
+      </div>
+
+      <div class="hide-on-med-and-down">
+        <div class="container white">
+          <div class="row">
+            <h2 class="header blue-text">Introduction</h2>
+            <p>A partir du 9 avril 2018, j'ai effectué un stage de 12 semaines pour valider mes 2 années de DUT Informatique à l'IUT de Nantes. J'ai fait ce stage dans 
+              le service informatique de la compagnie aérienne HOP! situé à Nantes.</p>
+          </div>
+        </div>
+
+        <div class="container white">
+          <div class="row">
+            <h2 class="header blue-text">Missions</h2>
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Mise en place d'une authentification par SSO sur un site web déjà existant</div>
+                <div class="collapsible-body"><span>L'objectif de la première partie de ce stage (1-2 semaines) était de mettre en place un système plus sécurisé de connexion au service 
+                  de gestion de la flotte et du personnel navigant de HOP!.<!--<a href="#mission1">Voir</a>--></span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Correction d'un bug de session sans solution depuis un certain temps</div>
+                <div class="collapsible-body"><span>Ayant terminé la première mission plus vite que prévu, un objectif intermédiaire m'a été fourni. Je devais trouver l'origine et une 
+                  solution à un bug sur le service web de HOP! qui provoquait une suppression des variables de session puis une déconnexion pour des raisons inconnues. <!--<a href="#mission2">Voir</a>--></span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Développement d'un programme permettant la génération et l'exécution de tests de non régression sur des 
+                  services SOAP</div>
+                <div class="collapsible-body"><span>La dernière partie du stage (7 semaines) portait sur le développement de tests de non régression, tests visant à assurer qu’un service 
+                  est toujours compatible avec ses clients une fois qu’il a été mis à jour. <!--<a href="#mission3">Voir</a>--></span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container white">
+          <div class="row">
+            <h2 class="header blue-text">Mission 1 : Authentification par SSO</h2>
+            <p>
+              Avant mon stage, le personnel était authentifié lors de sa connection en entrant son code personnel à 3 lettres (trigramme). Les données correspondantes à ce trigramme 
+              étaient ensuite récupérer dans la base de données du service avant d'être stockées en session. <br> Cette manière de faire posait des problèmes de sécurité, car aucun mot 
+              de passe n'était demandé, ainsi qu'un problème d'utilisation car en cas de déconnexion le temps pris pour se reconnecter est du temps perdu. <br> HOP! avait déjà un SSO (OpenSSO,
+              devenu OpenAM) qui servait pour d'autres services. Mon but a donc été de changer le système de connexion pour que les requètes soit gérer par le SSO qui renvera ensuite les informations
+              (trigramme dans notre cas) pour que le site puisse fonctionner normalement.
+            </p>
+          </div>
+        </div>
+
+        <div class="container white">
+          <div class="row">
+            <h2 class="header blue-text">Mission 2 : Test de non régression</h2>
+            <p>
+              HOP! développe des services SOAP qui servent ensuites dans d'autres de leur programmes (service de paie, gestion des vols, du personnel au sol ...). <br> Ma mission était de 
+              développer un programme qui prend un fichier de description de service (fichier WSDL), qui contient toutes les méthodes et les types de données utilisés par le service et qui créer
+              ensuite des tests pour vérifier que les entrées et les sorties sont toujours bien les mêmes d'une version à une autre du service.</p>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <img class="center-align" src="./assets/regression.PNG" alt="schema regression" style="width:50%; margin-left:25%">
+            </div>
+          </div>
+        </div>
+
+        <div class="container white">
+          <div class="row">
+            <h2 class="header blue-text">Mission supplémentaire : Correction d'un bug PHP</h2>
+            <p>
+              Le site que j'ai modifié dans ma première mission souffrait d'un bug qui fermait les sessions au bout d'environ 1 heure. La première mission m'ayant pris 2 semaines de 
+              moins que ce qui était prévu, on m'a rajouté comme tâche celle de trouver une solution à ce bug. <br> Dans un premier temps, j'ai vérifié dans le code du site si aucun fichier 
+              ne faisait de réinitialisation des variables de session. Je me suis ensuite renseigné sur le fonctionnement du grabage collector de PHP, mais meme après l'avoir désactivé le 
+              problème persistait. J'ai donc encore élargie ma "zone de rechercher" et j'ai vérifié tous les processus qui agissaient sur le dossier contenant les sessions (particulierement CRON).
+              Je n'ai encore malheureusement rien trouvé, même en modifiant le dossier de stockages des fichiers de session PHP. <br> La dernière option était alors de vérifier si l'OS (OpenSUSE 13.2)
+              n'avait pas de problème avec Apache ou PHP6.3. Il s'est avéré qu'un bug de longue date était connu, mais tellement vieux qu'il ne remontait pas tout de suite dans les recherches sur 
+              internet. Ce bug causait des suppression de session à des fréquences plus ou moins aléatoires. OpenSUSE 13.2 était un vieille distribution qui avait depuis été remplacée par la version 15. 
+              Cette version était utilisait par HOP! dans un objectif d'uniformité avec les autres systèmes. <br> La solution a donc été de migrer le serveur sous CentOS, une autre distribution qui 
+              est aussi utilisée chez eux.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hide-on-large-only flow-text">
+        <div class="container white">
+          <div class="row">
+            <h2 class="header blue-text">Stage de DUT</h2>
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Intoduction</div>
+                <div class="collapsible-body"><span>A partir du 9 avril 2018, j'ai effectué un stage de 12 semaines pour valider mes 2 années de DUT Informatique à l'IUT de Nantes. J'ai fait ce stage 
+                  dans le service informatique de la compagnie aérienne HOP! situé à Nantes.</span></div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">add</i>Missions</div>
+                <div class="collapsible-body">
+                  <ul class="collapsible">
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">add</i>Mise en place d'une authentification par SSO sur un site web déjà existant</div>
+                      <div class="collapsible-body"><span>L'objectif de la première partie de ce stage (1-2 semaines) était de mettre en place un système plus sécurisé de connexion au service 
+                        de gestion de la flotte et du personnel navigant de HOP!.<!--<a href="#mission1">Voir</a>--></span></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">add</i>Correction d'un bug de session sans solution depuis un certain temps</div>
+                      <div class="collapsible-body"><span>Ayant terminé la première mission plus vite que prévu, un objectif intermédiaire m'a été fourni. Je devais trouver l'origine et une 
+                        solution à un bug sur le service web de HOP! qui provoquait une suppression des variables de session puis une déconnexion pour des raisons inconnues. <!--<a href="#mission2">Voir</a>--></span></div>
+                    </li>
+                     <li>
+                      <div class="collapsible-header"><i class="material-icons">add</i>Développement d'un programme permettant la génération et l'exécution de tests de non régression sur des 
+                        services SOAP</div>
+                      <div class="collapsible-body"><span>La dernière partie du stage (7 semaines) portait sur le développement de tests de non régression, tests visant à assurer qu’un service 
+                        est toujours compatible avec ses clients une fois qu’il a été mis à jour. <!--<a href="#mission3">Voir</a>--></span></div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+                  <li>
+                    <div class="collapsible-header"><i class="material-icons">add</i>MISSION 1 : AUTHENTIFICATION PAR SSO</div>
+                      <div class="collapsible-body"><span>Avant mon stage, le personnel était authentifié lors de sa connection en entrant son code personnel à 3 lettres (trigramme). Les données correspondantes à ce trigramme 
+                          étaient ensuite récupérer dans la base de données du service avant d'être stockées en session. <br> Cette manière de faire posait des problèmes de sécurité, car aucun mot 
+                          de passe n'était demandé, ainsi qu'un problème d'utilisation car en cas de déconnexion le temps pris pour se reconnecter est du temps perdu. <br> HOP! avait déjà un SSO (OpenSSO,
+                          devenu OpenAM) qui servait pour d'autres services. Mon but a donc été de changer le système de connexion pour que les requètes soit gérer par le SSO qui renvera ensuite les informations
+                          (trigramme dans notre cas) pour que le site puisse fonctionner normalement.</span></div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header"><i class="material-icons">add</i>MISSION 2 : TEST DE NON RÉGRESSION</div>
+                    <div class="collapsible-body"><span>HOP! développe des services SOAP qui servent ensuites dans d'autres de leur programmes (service de paie, gestion des vols, du personnel au sol ...). <br> Ma mission était de 
+                      développer un programme qui prend un fichier de description de service (fichier WSDL), qui contient toutes les méthodes et les types de données utilisés par le service et qui créer
+                      ensuite des tests pour vérifier que les entrées et les sorties sont toujours bien les mêmes d'une version à une autre du service.</span>
+                      <div class="row">
+                        <div class="col s12">
+                          <img class="center-align" src="./assets/regression.PNG" alt="schema regression" style="width:50%; margin-left:25%">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                      <div class="collapsible-header"><i class="material-icons">add</i>Mission supplémentaire : Correction d'un bug PHP</div>
+                        <div class="collapsible-body"><span>Le site que j'ai modifié dans ma première mission souffrait d'un bug qui fermait les sessions au bout d'environ 1 heure. La première mission m'ayant pris 2 semaines de 
+                            moins que ce qui était prévu, on m'a rajouté comme tâche celle de trouver une solution à ce bug. <br> Dans un premier temps, j'ai vérifié dans le code du site si aucun fichier 
+                            ne faisait de réinitialisation des variables de session. Je me suis ensuite renseigné sur le fonctionnement du grabage collector de PHP, mais meme après l'avoir désactivé le 
+                            problème persistait. J'ai donc encore élargie ma "zone de rechercher" et j'ai vérifié tous les processus qui agissaient sur le dossier contenant les sessions (particulierement CRON).
+                            Je n'ai encore malheureusement rien trouvé, même en modifiant le dossier de stockages des fichiers de session PHP. <br> La dernière option était alors de vérifier si l'OS (OpenSUSE 13.2)
+                            n'avait pas de problème avec Apache ou PHP6.3. Il s'est avéré qu'un bug de longue date était connu, mais tellement vieux qu'il ne remontait pas tout de suite dans les recherches sur 
+                            internet. Ce bug causait des suppression de session à des fréquences plus ou moins aléatoires. OpenSUSE 13.2 était un vieille distribution qui avait depuis été remplacée par la version 15. 
+                            Cette version était utilisait par HOP! dans un objectif d'uniformité avec les autres systèmes. <br> La solution a donc été de migrer le serveur sous CentOS, une autre distribution qui 
+                            est aussi utilisée chez eux.</span></div>
+                    </li>
+              </div>
+          </div>
+        </div>
+
+      <div class="parallax-container">
+        <div class="parallax">
+          <img src="./assets/pexels-photo-270557.jpeg">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer blue">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Liens utiles</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#modalContact">Contact</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/theo.viardin">Facebook</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/théo-viardin-00bb89149">Linkedin</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2018 Théo Viardin
+      </div>
+    </div>
+  </footer>
+
+  <div id="modalContact" class="modal">
+    <div class="modal-content">
+      <h4>Contact</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="Adresse email" id="mail" type="email" class="validate">
+              <label for="mail">Adresse mail</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Objet" id="objet" type="text" class="validate">
+              <label for="objet">Objet</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea placeholder="Message" id="message" class="materialize-textarea"></textarea>
+              <label for="message">Message</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12" id="errorSpace">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-red btn-flat">Annuler</a>
+        <a class="waves-effect waves-green btn-flat envoyerMail">Envoyer</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $('.envoyerMail').click((e) => {
+      e.preventDefault();
+      $.post('./api/contact', {email: $('#mail').val(), objet:$('#objet').val(), message:$('#message').val()}, (res) => {
+        $('#errorSpace').empty();
+        $('#modalContact').modal('close');
+        M.toast({html: 'Message envoyé'})
+      }).fail((jqXHR, textStatus, errorThrown) => {
+        if (jqXHR.status == 400) {
+          $('#errorSpace').empty();
+          $('#errorSpace').append(`<p class="red-text text-darken-2">Veuillez remplir tous les champs</p>`) ;      
+        }
+      });
+    });
+  </script>
+</body>
+</html>

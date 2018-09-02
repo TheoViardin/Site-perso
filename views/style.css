@@ -1,0 +1,31 @@
+.header {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.tabs .indicator {
+  background-color: white;
+}
+
+.titre {
+  font-size: 75px !important;
+  top: 25%;
+  transition: all .5s;
+}
+
+.nav-titre {
+  height: 150px !important;
+  transition: height .4s;
+}
+
+.scrolled-nav {
+  height: 50px !important;
+}
+
+.scrolled-nav .titre  {
+  font-size: 2.1rem !important;
+}
