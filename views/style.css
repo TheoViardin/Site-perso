@@ -29,3 +29,18 @@
 .scrolled-nav .titre  {
   font-size: 2.1rem !important;
 }
+
+.slideOnShow {
+  animation: slideOnShow 1s forwards 0s ease;
+}
+
+@keyframes slideOnShow {
+  0% {
+    transform: translateY(-15%) translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+  }
+}
